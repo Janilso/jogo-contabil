@@ -8,8 +8,6 @@ class perguntas extends StatefulWidget {
 class _perguntasState extends State<perguntas> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
-    );
+    return Container();
   }
 }
