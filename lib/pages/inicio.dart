@@ -30,6 +30,7 @@ class _homePageState extends State<homePage> {
         ),
         body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
                 height: 200,
@@ -59,7 +60,15 @@ class _homePageState extends State<homePage> {
                     ),
                   ],
                 ),
-              )
+              ),
+              Text(
+                _nome,
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                  fontSize: 30,
+                ),
+              ),
             ],
           ),
         ));

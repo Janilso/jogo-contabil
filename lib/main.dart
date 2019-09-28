@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         fontFamily: 'Raleway',
+        buttonTheme: ButtonThemeData(),
       ),
       home: homePage(),
     );
