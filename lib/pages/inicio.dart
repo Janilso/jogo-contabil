@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jogocontabil/components/button.dart';
 
 class homePage extends StatefulWidget {
   @override
@@ -12,23 +13,31 @@ class _homePageState extends State<homePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.black,
-        appBar: AppBar(
-          title: Text(
-            "Game",
-            style: TextStyle(
-              fontWeight: FontWeight.w700,
-            ),
+      backgroundColor: Colors.black,
+      appBar: AppBar(
+        title: Text(
+          "Game",
+          style: TextStyle(
+            fontWeight: FontWeight.w700,
           ),
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.help_outline),
-              onPressed: () {},
-              color: Colors.white,
-            )
-          ],
         ),
-        body: Center(
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.help_outline),
+            onPressed: () {},
+            color: Colors.white,
+          )
+        ],
+        backgroundColor: Color(0xff4E0061),
+      ),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Color(0xffFF0066), Color(0xff2B0036)]),
+        ),
+        child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -61,6 +70,9 @@ class _homePageState extends State<homePage> {
                   ],
                 ),
               ),
+              SizedBox(
+                height: 30,
+              ),
               Text(
                 _nome,
                 style: TextStyle(
@@ -69,8 +81,21 @@ class _homePageState extends State<homePage> {
                   fontSize: 30,
                 ),
               ),
+              SizedBox(
+                height: 70,
+              ),
             ],
           ),
-        ));
+        ),
+      ),
+      floatingActionButton: Padding(
+        padding: EdgeInsets.fromLTRB(0, 0, 0, 50),
+        child: CustomButton(
+          text: "COMEÇAR",
+          onPressed: () {},
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+    );
   }
 }
