@@ -1,14 +1,16 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:jogocontabil/components/button.dart';
+import 'package:jogocontabil/pages/pergutas-view.dart';
 
-class homePage extends StatefulWidget {
+class HomePage extends StatefulWidget {
   @override
-  _homePageState createState() => _homePageState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _homePageState extends State<homePage> {
-  int _pontuacao = 115;
-  String _nome = "Cláudia Sampaio";
+class _HomePageState extends State<HomePage> {
+  final int _pontuacao = 115;
+  final String _nome = "Cláudia Sampaio";
 
   @override
   Widget build(BuildContext context) {
@@ -92,7 +94,9 @@ class _homePageState extends State<homePage> {
         padding: EdgeInsets.fromLTRB(0, 0, 0, 50),
         child: CustomButton(
           text: "COMEÇAR",
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, "/perguntas");
+          },
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,

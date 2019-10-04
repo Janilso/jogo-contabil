@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:jogocontabil/pages/inicio.dart';
+import 'package:jogocontabil/pages/pergutas-view.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -23,7 +23,11 @@ class MyApp extends StatelessWidget {
           textTheme: ButtonTextTheme.primary,
         ),
       ),
-      home: homePage(),
+      home: HomePage(),
+      routes: {
+        "/perguntas": (_) => PerguntasView(),
+        "/home": (_) => HomePage(),
+      },
     );
   }
 }

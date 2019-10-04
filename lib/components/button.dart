@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  String text;
+  final String text;
   CustomButton({@required this.onPressed, this.text});
   final GestureTapCallback onPressed;
 
@@ -20,16 +20,15 @@ class CustomButton extends StatelessWidget {
       ),
       child: SizedBox.expand(
         child: FlatButton(
-          child: Text(
-            "$text",
-            style: TextStyle(
-              fontWeight: FontWeight.w500,
-              fontSize: 30,
-              color: Theme.of(context).primaryColor,
+            child: Text(
+              "$text",
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 30,
+                color: Theme.of(context).primaryColor,
+              ),
             ),
-          ),
-          onPressed: () {},
-        ),
+            onPressed: onPressed),
       ),
     );
   }
