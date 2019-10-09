@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jogocontabil/components/perguntas-view/alternativa-component.dart';
 
 class PerguntasView extends StatefulWidget {
   @override
@@ -8,8 +9,14 @@ class PerguntasView extends StatefulWidget {
 class _PerguntasStateView extends State<PerguntasView> {
   String _pergunta =
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry?";
+  String a = "Lorem Ipsum is simply";
+  String b = "Lorem Ipsum is simply";
+  String c = "Lorem Ipsum is simply";
+  String d = "Lorem Ipsum is simply";
+
   @override
   Widget build(BuildContext context) {
+    // final makeListTile =
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -43,12 +50,23 @@ class _PerguntasStateView extends State<PerguntasView> {
               children: <Widget>[
                 Text(
                   "$_pergunta",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 30,
-                    fontWeight: FontWeight.w800,
-                  ),
+                  style: Theme.of(context).textTheme.title,
                   textAlign: TextAlign.center,
+                ),
+                SizedBox(
+                  height: 50,
+                ),
+                ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: 4,
+                  itemBuilder: (BuildContext context, int i) {
+                    return InkWell(
+                      onTap: () {
+                        print("$i");
+                      },
+                      child: Alternativa(),
+                    );
+                  },
                 ),
               ],
             ),
