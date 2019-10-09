@@ -1,10 +1,8 @@
-import 'package:jogocontabil/models/alternativa-model.dart';
-
 class PerguntaModel {
   int id;
   String texto;
-  List<AlternativaModel> alternativas;
-  String respostaCorreta;
+  List<String> alternativas;
+  int respostaCorreta;
 
   PerguntaModel({this.id, this.alternativas, this.respostaCorreta, this.texto});
 }

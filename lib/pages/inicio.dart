@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:jogocontabil/components/button.dart';
+import 'package:jogocontabil/pages/pergutas-view.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -94,7 +95,8 @@ class _HomePageState extends State<HomePage> {
         child: CustomButton(
           text: "COMEÇAR",
           onPressed: () {
-            Navigator.pushReplacementNamed(context, "/perguntas");
+            Navigator.push(context,
+                CupertinoPageRoute(builder: (context) => PerguntasView()));
           },
         ),
       ),

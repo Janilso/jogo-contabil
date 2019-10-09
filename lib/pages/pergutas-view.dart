@@ -9,14 +9,15 @@ class PerguntasView extends StatefulWidget {
 class _PerguntasStateView extends State<PerguntasView> {
   String _pergunta =
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry?";
-  String a = "Lorem Ipsum is simply";
-  String b = "Lorem Ipsum is simply";
-  String c = "Lorem Ipsum is simply";
-  String d = "Lorem Ipsum is simply";
+  List<String> _listAlternativas = [
+    "Opção de resposta 1",
+    "Opção de resposta 2",
+    "Opção de resposta 3",
+    "Opção de resposta 4"
+  ];
 
   @override
   Widget build(BuildContext context) {
-    // final makeListTile =
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -27,6 +28,7 @@ class _PerguntasStateView extends State<PerguntasView> {
       child: Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
+            automaticallyImplyLeading: false,
             actions: <Widget>[
               Padding(
                 padding: EdgeInsets.all(10),
@@ -36,7 +38,7 @@ class _PerguntasStateView extends State<PerguntasView> {
                     size: 40,
                   ),
                   onPressed: () {
-                    Navigator.pushReplacementNamed(context, "/home");
+                    Navigator.of(context).pop(null);
                   },
                 ),
               )
@@ -58,13 +60,15 @@ class _PerguntasStateView extends State<PerguntasView> {
                 ),
                 ListView.builder(
                   shrinkWrap: true,
-                  itemCount: 4,
+                  itemCount: _listAlternativas.length,
                   itemBuilder: (BuildContext context, int i) {
                     return InkWell(
                       onTap: () {
                         print("$i");
                       },
-                      child: Alternativa(),
+                      child: Alternativa(
+                        textoAlternativa: _listAlternativas[i],
+                      ),
                     );
                   },
                 ),
