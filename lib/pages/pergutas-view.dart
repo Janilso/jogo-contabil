@@ -26,55 +26,56 @@ class _PerguntasStateView extends State<PerguntasView> {
             colors: [Color(0xff8708A5), Color(0xff2B0036)]),
       ),
       child: Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          actions: <Widget>[
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: IconButton(
+                icon: Icon(
+                  Icons.home,
+                  size: 40,
+                ),
+                onPressed: () {
+                  Navigator.of(context).pop(null);
+                },
+              ),
+            )
+          ],
           backgroundColor: Colors.transparent,
-          appBar: AppBar(
-            automaticallyImplyLeading: false,
-            actions: <Widget>[
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: IconButton(
-                  icon: Icon(
-                    Icons.home,
-                    size: 40,
-                  ),
-                  onPressed: () {
-                    Navigator.of(context).pop(null);
-                  },
-                ),
-              )
+          elevation: 0.0,
+        ),
+        body: Padding(
+          padding: EdgeInsets.fromLTRB(20, 40, 20, 20),
+          child: Column(
+            children: <Widget>[
+              Text(
+                "$_pergunta",
+                style: Theme.of(context).textTheme.title,
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(
+                height: 50,
+              ),
+              ListView.builder(
+                shrinkWrap: true,
+                itemCount: _listAlternativas.length,
+                itemBuilder: (BuildContext context, int i) {
+                  return InkWell(
+                    onTap: () {
+                      print("$i");
+                    },
+                    child: Alternativa(
+                      textoAlternativa: _listAlternativas[i],
+                    ),
+                  );
+                },
+              ),
             ],
-            backgroundColor: Colors.transparent,
-            elevation: 0.0,
           ),
-          body: Padding(
-            padding: EdgeInsets.fromLTRB(20, 40, 20, 20),
-            child: Column(
-              children: <Widget>[
-                Text(
-                  "$_pergunta",
-                  style: Theme.of(context).textTheme.title,
-                  textAlign: TextAlign.center,
-                ),
-                SizedBox(
-                  height: 50,
-                ),
-                ListView.builder(
-                  shrinkWrap: true,
-                  itemCount: _listAlternativas.length,
-                  itemBuilder: (BuildContext context, int i) {
-                    return InkWell(
-                      onTap: () {
-                        print("$i");
-                      },
-                      child: Alternativa(
-                        textoAlternativa: _listAlternativas[i],
-                      ),
-                    );
-                  },
-                ),
-              ],
-            ),
-          )),
+        ),
+      ),
     );
   }
 }
