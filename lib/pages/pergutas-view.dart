@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jogocontabil/components/perguntas-view/alternativa-component.dart';
+import 'package:jogocontabil/controller/lista-de-perguntas.dart';
 
 class PerguntasView extends StatefulWidget {
   @override
@@ -7,8 +8,8 @@ class PerguntasView extends StatefulWidget {
 }
 
 class _PerguntasStateView extends State<PerguntasView> {
-  String _pergunta =
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry?";
+  String _pergunta = ListaDePerguntas().getPerguntaFromID(1);
+
   List<String> _listAlternativas = [
     "Opção de resposta 1",
     "Opção de resposta 2",
