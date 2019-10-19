@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:jogocontabil/components/button.dart';
 import 'package:jogocontabil/components/perguntas-view/alternativa-component.dart';
 import 'package:jogocontabil/controller/lista-de-perguntas.dart';
+import 'package:jogocontabil/models/pergunta-model.dart';
 
 class PerguntasView extends StatefulWidget {
   @override
@@ -8,14 +10,14 @@ class PerguntasView extends StatefulWidget {
 }
 
 class _PerguntasStateView extends State<PerguntasView> {
-  String _pergunta = ListaDePerguntas().getPerguntaFromID(1);
+  // bool isSelected = false;
+  static ListaDePerguntas listaTotal = ListaDePerguntas();
+  static int id = 0;
+  int _selectedIndex;
 
-  List<String> _listAlternativas = [
-    "Opção de resposta 1",
-    "Opção de resposta 2",
-    "Opção de resposta 3",
-    "Opção de resposta 4"
-  ];
+  String _pergunta = listaTotal.getPerguntaFromID(id);
+  List _listAlternativas = listaTotal.getAlternativasFromID(id);
+  String _perguntaCorreta = listaTotal.getPerguntaFromID(id);
 
   @override
   Widget build(BuildContext context) {
@@ -65,18 +67,34 @@ class _PerguntasStateView extends State<PerguntasView> {
                 itemBuilder: (BuildContext context, int i) {
                   return InkWell(
                     onTap: () {
-                      print("$i");
+                      setState(() {
+                        _selectedIndex = i;
+                      });
                     },
-                    child: Alternativa(
-                      textoAlternativa: _listAlternativas[i],
-                    ),
+                    child: _selectedIndex != null && _selectedIndex == i
+                        ? icon(true, _listAlternativas[i])
+                        : icon(false, _listAlternativas[i]),
                   );
                 },
+              ),
+              SizedBox(
+                height: 50,
+              ),
+              CustomButton(
+                onPressed: () {},
+                text: "RESPONDER",
               ),
             ],
           ),
         ),
       ),
+    );
+  }
+
+  Widget icon(bool isSelected, String texto) {
+    return Alternativa(
+      textoAlternativa: texto,
+      isSelected: isSelected,
     );
   }
 }

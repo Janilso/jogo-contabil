@@ -20,6 +20,9 @@ class CustomButton extends StatelessWidget {
       ),
       child: SizedBox.expand(
         child: FlatButton(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(80),
+            ),
             child: Text(
               "$text",
               style: TextStyle(
