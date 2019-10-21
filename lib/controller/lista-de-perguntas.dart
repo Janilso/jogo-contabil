@@ -29,7 +29,7 @@ class ListaDePerguntas {
     return retorno;
   }
 
-  String getAlternativaCorretaFromID(int id) {
-    return listaDePergunta.elementAt(id).alternativaCorreta.toString();
+  int getAlternativaCorretaFromID(int id) {
+    return listaDePergunta.elementAt(id).alternativaCorreta.toInt();
   }
 }

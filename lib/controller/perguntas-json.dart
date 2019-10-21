@@ -5,7 +5,7 @@ class PerguntasJson {
 [
   {
     "id": 0,
-    "texto": "Quanyto é 1+1?",
+    "texto": "Quanto é 1+1?",
     "alternativa 1": "2",
     "alternativa 2": "5",
     "alternativa 3": "15",
@@ -23,7 +23,7 @@ class PerguntasJson {
   },
   {
     "id": 2,
-    "texto": "Quanyto é 5/1?",
+    "texto": "Quanto é 5/1?",
     "alternativa 1": "15",
     "alternativa 2": "2",
     "alternativa 3": "5",

@@ -1,26 +1,35 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:jogocontabil/components/button.dart';
 import 'package:jogocontabil/components/perguntas-view/alternativa-component.dart';
+import 'package:jogocontabil/controller/id-pergunta-provider.dart';
 import 'package:jogocontabil/controller/lista-de-perguntas.dart';
-import 'package:jogocontabil/models/pergunta-model.dart';
+import 'package:provider/provider.dart';
+import 'package:toast/toast.dart';
 
 class PerguntasView extends StatefulWidget {
   @override
   _PerguntasStateView createState() => _PerguntasStateView();
 }
 
-class _PerguntasStateView extends State<PerguntasView> {
-  // bool isSelected = false;
+class _PerguntasStateView extends State<PerguntasView>
+    with SingleTickerProviderStateMixin {
   static ListaDePerguntas listaTotal = ListaDePerguntas();
-  static int id = 0;
-  int _selectedIndex;
 
-  String _pergunta = listaTotal.getPerguntaFromID(id);
-  List _listAlternativas = listaTotal.getAlternativasFromID(id);
-  String _perguntaCorreta = listaTotal.getPerguntaFromID(id);
+  int _selectedIndex;
+  int _responstaSelecionada;
+  bool _isResponder = false;
+  bool _isSelected = false;
+  bool _isClickable = true;
 
   @override
   Widget build(BuildContext context) {
+    int id = Provider.of<IdPerguntaProvider>(context).getGlobalID();
+
+    String _pergunta = listaTotal.getPerguntaFromID(id);
+    List _listAlternativas = listaTotal.getAlternativasFromID(id);
+    int _alternativaCorreta = listaTotal.getAlternativaCorretaFromID(id);
+
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -67,9 +76,14 @@ class _PerguntasStateView extends State<PerguntasView> {
                 itemBuilder: (BuildContext context, int i) {
                   return InkWell(
                     onTap: () {
-                      setState(() {
-                        _selectedIndex = i;
-                      });
+                      if (_isClickable) {
+                        setState(() {
+                          _selectedIndex = i;
+                          _responstaSelecionada = i + 1;
+                          _isResponder = true;
+                          _isSelected = true;
+                        });
+                      }
                     },
                     child: _selectedIndex != null && _selectedIndex == i
                         ? icon(true, _listAlternativas[i])
@@ -80,10 +94,34 @@ class _PerguntasStateView extends State<PerguntasView> {
               SizedBox(
                 height: 50,
               ),
-              CustomButton(
-                onPressed: () {},
-                text: "RESPONDER",
-              ),
+              _isSelected
+                  ? _isResponder
+                      ? getButton(true, () {
+                          String text;
+                          _responstaSelecionada == _alternativaCorreta
+                              ? text = "Resposta Correta"
+                              : text = "Resposta Errada";
+                          Toast.show(
+                            text,
+                            context,
+                            duration: Toast.LENGTH_SHORT,
+                            gravity: Toast.BOTTOM,
+                          );
+                          print(id);
+                          setState(() {
+                            _isResponder = false;
+                            _isClickable = false;
+                          });
+                        }, "RESPONDER")
+                      : getButton(false, () {
+                          Provider.of<IdPerguntaProvider>(context).increment();
+                          Navigator.pushReplacement(
+                              context,
+                              CupertinoPageRoute(
+                                  builder: (context) => PerguntasView()));
+                          print(id);
+                        }, "CONTINUAR")
+                  : Container(),
             ],
           ),
         ),
@@ -95,6 +133,34 @@ class _PerguntasStateView extends State<PerguntasView> {
     return Alternativa(
       textoAlternativa: texto,
       isSelected: isSelected,
+    );
+  }
+
+  Widget getButton(bool responder, GestureTapCallback onPressed, String texto) {
+    Widget retorno;
+    if (responder) {
+      retorno = CustomButton(
+        onPressed: onPressed,
+        text: texto,
+      );
+    } else {
+      retorno = CustomButton(
+        onPressed: onPressed,
+        text: texto,
+      );
+    }
+    return retorno;
+  }
+
+  void _showToast(BuildContext context, bool correta) {
+    String text = "";
+    correta ? text = "Resposta Correta" : text = "Resposta Errada";
+
+    final scaffold = Scaffold.of(context);
+    scaffold.showSnackBar(
+      SnackBar(
+        content: const Text("text"),
+      ),
     );
   }
 }
