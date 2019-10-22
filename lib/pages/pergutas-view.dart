@@ -5,6 +5,7 @@ import 'package:jogocontabil/components/perguntas-view/alternativa-component.dar
 import 'package:jogocontabil/controller/id-pergunta-provider.dart';
 import 'package:jogocontabil/controller/lista-de-perguntas.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:toast/toast.dart';
 
 class PerguntasView extends StatefulWidget {
@@ -21,6 +22,26 @@ class _PerguntasStateView extends State<PerguntasView>
   bool _isResponder = false;
   bool _isSelected = false;
   bool _isClickable = true;
+
+  int pontuacao;
+
+  Future loadPontuacao() async {
+    var prefs = await SharedPreferences.getInstance();
+    int _pontuacao = prefs.getInt("pontuacao") ?? 0;
+    pontuacao = _pontuacao.toInt();
+    print(pontuacao);
+  }
+
+  void changePontuacao(int novaPontuacao) async {
+    var prefs = await SharedPreferences.getInstance();
+    await prefs.setInt("pontuacao", novaPontuacao);
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    loadPontuacao();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -108,6 +129,7 @@ class _PerguntasStateView extends State<PerguntasView>
                             gravity: Toast.BOTTOM,
                           );
                           print(id);
+                          changePontuacao(pontuacao + 10);
                           setState(() {
                             _isResponder = false;
                             _isClickable = false;
@@ -150,17 +172,5 @@ class _PerguntasStateView extends State<PerguntasView>
       );
     }
     return retorno;
-  }
-
-  void _showToast(BuildContext context, bool correta) {
-    String text = "";
-    correta ? text = "Resposta Correta" : text = "Resposta Errada";
-
-    final scaffold = Scaffold.of(context);
-    scaffold.showSnackBar(
-      SnackBar(
-        content: const Text("text"),
-      ),
-    );
   }
 }
