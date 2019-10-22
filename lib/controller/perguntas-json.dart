@@ -92,7 +92,62 @@ class PerguntasJson {
     "alternativa 3": "Dívidas de funcionamento",
     "alternativa 4": "Dívidas Título",
     "alternativa_certa": 3
-  }
+  },
+  {
+    "id": 10,
+    "texto": "Qual elemento do balanço patrimonial representa o capital de giro da empresa ?",
+    "alternativa 1": "Capital social",
+    "alternativa 2": "Imobilizado",
+    "alternativa 3": "Passivo circulante",
+    "alternativa 4": "Ativo circulante",
+    "alternativa_certa": 4
+  },
+  {
+    "id": 11,
+    "texto": "Sobre os objetivos da contabilidade assinale a alternativa correta:",
+    "alternativa 1": "Demonstrar corretamente o balanço",
+    "alternativa 2": "Prover aos diferentes usuários informações sobre aspectos de natureza econômica, financeira e física do patrimônio",
+    "alternativa 3": "Evidenciar e analisar as mutações patrimoniais",
+    "alternativa 4": "Todas as afirmativas anteriores estão corretas",
+    "alternativa_certa": 4
+  },
+  {
+    "id": 12,
+    "texto": "São técnicas contábeis:",
+    "alternativa 1": "Escrituração, demonstração contábeis auditoria e perícia e análise das demonstrações contábeis",
+    "alternativa 2": "Balanço patrimonial, demonstração do resultado do exercício patrimôniolíquido e analise e balanços",
+    "alternativa 3": "Escrituração demonstração contábeis atos administrativos e balanço patrimonial",
+    "alternativa 4": "Auditoria,principios contábeis atos administrativos",
+    "alternativa_certa": 2
+  },
+  {
+    "id": 13,
+    "texto": "diferença entre ativo e passivo e denominada:",
+    "alternativa 1": "Situação liquida patrimonial",
+    "alternativa 2": "Balanço patrimonial",
+    "alternativa 3": "Situação liquida patrimonial positiva",
+    "alternativa 4": "Situação liquida patrimonial negativa",
+    "alternativa_certa": 1
+  },
+   {
+    "id": 14,
+    "texto": "A seguinte opção não é considerada uma técnica contábil:",
+    "alternativa 1": "Escrituração",
+    "alternativa 2": "Elaboração das demonstrações contábeis",
+    "alternativa 3": "Auditoria ",
+    "alternativa 4": "Planejamento",
+    "alternativa_certa": 4
+  },
+  {
+    "id": 15,
+    "texto": "Podemos definir a contabilidade como:",
+    "alternativa 1": "Sistema de informações que registra as ocorrências que afetam o patrimônio de uma entidade, visando a obtenção de um resultado mensurável economicamente",
+    "alternativa 2": "Ciência que estuda o patrimônio, usando uma metodologia especifica para coletarregistrar acumular resumir e analisar, todos os fatos que afetam a situação patrimonial de uma entidade",
+    "alternativa 3": "Conjunto de princípios normas e procedimento que tem como finalidade ordenar os fatores de produção",
+    "alternativa 4": "Ciência que organiza, orienta a analisa os fenômenos relativos a produção.",
+    "alternativa_certa": 2
+  },
+  
 ]
     ''';
   }
