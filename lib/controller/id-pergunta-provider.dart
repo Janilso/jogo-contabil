@@ -19,12 +19,4 @@ class IdPerguntaProvider with ChangeNotifier {
     _globalID++;
     notifyListeners();
   }
-
-  void loadPontuacao() async {
-    var prefs = await SharedPreferences.getInstance();
-    int _pontuacao = prefs.getInt("pontuacao") ?? 0;
-    print(_pontuacao);
-    setPontuacao(_pontuacao.toInt());
-    // print(pontuacao);
-  }
 }
