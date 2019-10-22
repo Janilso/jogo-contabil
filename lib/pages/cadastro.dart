@@ -12,6 +12,18 @@ class Cadastro extends StatefulWidget {
 }
 
 class _CadastroState extends State<Cadastro> {
+  Future<bool> _future;
+  // bool cadastrado = false;
+
+  Future<bool> isCadastrado() async {
+    bool retorno;
+    var prefs = await SharedPreferences.getInstance();
+    var logged = prefs.getBool('cadastrado');
+    print("Logado = $logged");
+    if (logged != null) logged ? retorno = true : retorno = false;
+    return retorno;
+  }
+
   addJogador(TextEditingController controlador) async {
     var prefs = await SharedPreferences.getInstance();
     await prefs.setInt("pontuacao", 0);
@@ -41,8 +53,19 @@ class _CadastroState extends State<Cadastro> {
   }
 
   var controladorJogador = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    _future = isCadastrado();
+  }
+
   @override
   Widget build(BuildContext context) {
+    return cadastroView();
+  }
+
+  Widget cadastroView() {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(

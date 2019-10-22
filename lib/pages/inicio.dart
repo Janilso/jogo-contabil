@@ -4,7 +4,6 @@ import 'package:jogocontabil/components/button.dart';
 import 'package:jogocontabil/models/jogador-model.dart';
 import 'package:jogocontabil/pages/pergutas-view.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:toast/toast.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -13,23 +12,31 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   JogadorModel jogador = JogadorModel();
+  // Future<JogadorModel> _future;
 
-  final int _pontuacao = 115;
-  final String _nome = "Cláudia Sampaio";
+  // final int _pontuacao = 115;
+  // final String _nome = "Cláudia Sampaio";
 
   _HomePageState() {
-    loadNameAndPontuacao(jogador);
+    loadNameAndPontuacao();
   }
 
-  Future loadNameAndPontuacao(JogadorModel jogador) async {
+  Future loadNameAndPontuacao() async {
+    // JogadorModel jogador;
     var prefs = await SharedPreferences.getInstance();
-    var nome = prefs.getString("nome");
-    var pontuacao = prefs.getInt("pontuacao");
+    String _nome = prefs.getString("nome") ?? "Sem nome";
+    int _pontuacao = prefs.getInt("pontuacao") ?? 0;
 
-    nome != null ? jogador.nome = nome : print("Erro ao carregar nome");
-    pontuacao != null
-        ? jogador.pontuacao = pontuacao
-        : print("Erro ao carregar pontuação");
+    setState(() {
+      jogador.nome = _nome.toString();
+      jogador.pontuacao = _pontuacao.toInt();
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    loadNameAndPontuacao();
   }
 
   @override

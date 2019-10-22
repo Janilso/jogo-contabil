@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
+// import 'package:jogocontabil/models/jogador-model.dart';
 import 'package:jogocontabil/pages/cadastro.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import 'controller/id-pergunta-provider.dart';
+import 'package:jogocontabil/pages/inicio.dart';
 // import 'package:jogocontabil/pages/pergutas-view.dart';
 
-void main() => runApp(MyApp());
+Future<void> main() async {
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  bool logged = prefs.getBool("cadastrado") ?? false;
+  logged != null && logged == true ? logged = true : logged = false;
+  print(logged);
+  runApp(MyApp(
+    logged: logged,
+  ));
+}
 
 class MyApp extends StatelessWidget {
-  Future<bool> isCadastrado() async {
-    bool retorno = false;
-    var prefs = await SharedPreferences.getInstance();
-    var logged = await prefs.getBool('cadastrado');
-    if (logged != null) retorno = logged;
-    print(retorno);
-    return retorno;
-  }
-
+  final bool logged;
+  MyApp({this.logged});
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
@@ -67,7 +69,7 @@ class MyApp extends StatelessWidget {
             textTheme: ButtonTextTheme.primary,
           ),
         ),
-        home: Cadastro(),
+        home: logged ? HomePage() : Cadastro(),
       ),
     );
   }
