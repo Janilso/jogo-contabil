@@ -17,19 +17,29 @@ class ListaDePerguntas {
   }
 
   String getPerguntaFromID(int id) {
-    return listaDePergunta.elementAt(id).texto;
+    String retorno = "Sem mais perguntas!";
+    if (id <= this.listaDePergunta.length - 1) {
+      retorno = listaDePergunta.elementAt(id).texto;
+    }
+    return retorno;
   }
 
   List<String> getAlternativasFromID(int id) {
     List<String> retorno = [];
-    retorno.add(this.listaDePergunta.elementAt(id).alternativa1.toString());
-    retorno.add(this.listaDePergunta.elementAt(id).alternativa2.toString());
-    retorno.add(this.listaDePergunta.elementAt(id).alternativa3.toString());
-    retorno.add(this.listaDePergunta.elementAt(id).alternativa4.toString());
+    if (id <= this.listaDePergunta.length - 1) {
+      retorno.add(this.listaDePergunta.elementAt(id).alternativa1.toString());
+      retorno.add(this.listaDePergunta.elementAt(id).alternativa2.toString());
+      retorno.add(this.listaDePergunta.elementAt(id).alternativa3.toString());
+      retorno.add(this.listaDePergunta.elementAt(id).alternativa4.toString());
+    }
     return retorno;
   }
 
   int getAlternativaCorretaFromID(int id) {
-    return listaDePergunta.elementAt(id).alternativaCorreta.toInt();
+    int retorno = 0;
+    if (id <= this.listaDePergunta.length - 1) {
+      retorno = listaDePergunta.elementAt(id).alternativaCorreta.toInt();
+    }
+    return retorno;
   }
 }

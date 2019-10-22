@@ -146,7 +146,7 @@ class PerguntasJson {
     "alternativa 3": "Conjunto de princípios normas e procedimento que tem como finalidade ordenar os fatores de produção",
     "alternativa 4": "Ciência que organiza, orienta a analisa os fenômenos relativos a produção.",
     "alternativa_certa": 2
-  },
+  }
   
 ]
     ''';
