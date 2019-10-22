@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:jogocontabil/components/button.dart';
+import 'package:jogocontabil/models/jogador-model.dart';
 import 'package:jogocontabil/pages/pergutas-view.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:toast/toast.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -9,8 +12,25 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  JogadorModel jogador = JogadorModel();
+
   final int _pontuacao = 115;
   final String _nome = "Cláudia Sampaio";
+
+  _HomePageState() {
+    loadNameAndPontuacao(jogador);
+  }
+
+  Future loadNameAndPontuacao(JogadorModel jogador) async {
+    var prefs = await SharedPreferences.getInstance();
+    var nome = prefs.getString("nome");
+    var pontuacao = prefs.getInt("pontuacao");
+
+    nome != null ? jogador.nome = nome : print("Erro ao carregar nome");
+    pontuacao != null
+        ? jogador.pontuacao = pontuacao
+        : print("Erro ao carregar pontuação");
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +74,7 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      "$_pontuacao",
+                      jogador.pontuacao.toString(),
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 80,
@@ -76,7 +96,7 @@ class _HomePageState extends State<HomePage> {
                 height: 30,
               ),
               Text(
-                _nome,
+                jogador.nome.toString(),
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   color: Colors.white,

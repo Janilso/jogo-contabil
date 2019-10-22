@@ -151,16 +151,4 @@ class _PerguntasStateView extends State<PerguntasView>
     }
     return retorno;
   }
-
-  void _showToast(BuildContext context, bool correta) {
-    String text = "";
-    correta ? text = "Resposta Correta" : text = "Resposta Errada";
-
-    final scaffold = Scaffold.of(context);
-    scaffold.showSnackBar(
-      SnackBar(
-        content: const Text("text"),
-      ),
-    );
-  }
 }
