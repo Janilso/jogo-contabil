@@ -149,7 +149,7 @@ class PerguntasJson {
   },
   {
     "id": 16,
-    "texto": "Os fatos contábeis podem alterar o patrimônio em quantidade e/ou em qualidade e alterar ou não o resultado. Assim, quanto às classificações em permutativos, modificativos e mistos, analise as assertivas e assinale a alternativa que aponta as corretas. \n I. Os fatos permutativos são aqueles fatos contábeis que podem ou não alterar o patrimônio em quantidade, mas geralmente o alteram em qualidade, bem como jamais alteram o patrimônio líquido em quantidade. \n II. Os fatos modificativos são aqueles fatos contábeis que alteram o patrimônio líquido em qualidade e não em quantidade. \n III. Os fatos mistos são aqueles fatos contábeis que são permutativos e modificativos, simultaneamente. E, por isso, também podem ser aumentativos ou diminutivos. \n IV. Todos os tipos de fatos contábeis sempre alteram o patrimônio em qualidade.",
+    "texto": "Os fatos contábeis podem alterar o patrimônio em quantidade e ou em qualidade e alterar ou não o resultado. Assim, quanto às classificações em permutativos, modificativos e mistos, analise as assertivas e assinale a alternativa que aponta as corretas.  I. Os fatos permutativos são aqueles fatos contábeis que podem ou não alterar o patrimônio em quantidade, mas geralmente o alteram em qualidade, bem como jamais alteram o patrimônio líquido em quantidade.  II. Os fatos modificativos são aqueles fatos contábeis que alteram o patrimônio líquido em qualidade e não em quantidade.  III. Os fatos mistos são aqueles fatos contábeis que são permutativos e modificativos, simultaneamente. E, por isso, também podem ser aumentativos ou diminutivos.  IV. Todos os tipos de fatos contábeis sempre alteram o patrimônio em qualidade.",
     "alternativa 1": "Apenas I,II e III",
     "alternativa 2": "Apenas I,II e IV",
     "alternativa 3": "Apenas I,III e IV",
@@ -257,7 +257,7 @@ class PerguntasJson {
   },
   {
     "id": 28,
-    "texto": 'Observe a afirmativa: \n "Deve-se registrar em conta de passivo uma obrigação presente que provavelmente requeira um sacrifício de ativos." \n Esta afirmativa está:',
+    "texto": "Observe a afirmativa: 'Deve-se registrar em conta de passivo uma obrigação presente que provavelmente requeira um sacrifício de ativos.' Esta afirmativa está:",
     "alternativa 1": "Correta",
     "alternativa 2": "Incorreta",
     "alternativa 3": "Meio Correta",
@@ -275,7 +275,7 @@ class PerguntasJson {
   },
   {
     "id": 30,
-    "texto": 'Acerca do mercado de capitais, julgue a seguinte frase: \n "As ações representam uma fração do capital social de uma sociedade anônima, conferindo todas elas a seus acionistas direito a voto nas decisões da empresa." \n A frase está:',
+    "texto": "Acerca do mercado de capitais, julgue a seguinte frase:  'As ações representam uma fração do capital social de uma sociedade anônima, conferindo todas elas a seus acionistas direito a voto nas decisões da empresa.   A frase está:",
     "alternativa 1": "Certo",
     "alternativa 2": "Errado",
     "alternativa 3": "Meio Correta",
