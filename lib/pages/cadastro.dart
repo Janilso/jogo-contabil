@@ -27,6 +27,7 @@ class _CadastroState extends State<Cadastro> {
   addJogador(TextEditingController controlador) async {
     var prefs = await SharedPreferences.getInstance();
     await prefs.setInt("pontuacao", 0);
+    await prefs.setInt("pergunta", 0);
     await prefs.setString('nome', controlador.text)
         ? savedJogador()
         : Toast.show(

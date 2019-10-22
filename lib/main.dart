@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(
           builder: (_) => IdPerguntaProvider(),
-        )
+        ),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
