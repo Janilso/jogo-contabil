@@ -140,24 +140,6 @@ class PerguntasJson {
   },
   {
     "id": 15,
-    "texto": "Podemos definir a contabilidade como:",
-    "alternativa 1": "Sistema de informações que registra as ocorrências que afetam o patrimônio de uma entidade, visando a obtenção de um resultado mensurável economicamente",
-    "alternativa 2": "Ciência que estuda o patrimônio, usando uma metodologia especifica para coletarregistrar acumular resumir e analisar, todos os fatos que afetam a situação patrimonial de uma entidade",
-    "alternativa 3": "Conjunto de princípios normas e procedimento que tem como finalidade ordenar os fatores de produção",
-    "alternativa 4": "Ciência que organiza, orienta a analisa os fenômenos relativos a produção.",
-    "alternativa_certa": 2
-  },
-  {
-    "id": 16,
-    "texto": "Os fatos contábeis podem alterar o patrimônio em quantidade e ou em qualidade e alterar ou não o resultado. Assim, quanto às classificações em permutativos, modificativos e mistos, analise as assertivas e assinale a alternativa que aponta as corretas.  I. Os fatos permutativos são aqueles fatos contábeis que podem ou não alterar o patrimônio em quantidade, mas geralmente o alteram em qualidade, bem como jamais alteram o patrimônio líquido em quantidade.  II. Os fatos modificativos são aqueles fatos contábeis que alteram o patrimônio líquido em qualidade e não em quantidade.  III. Os fatos mistos são aqueles fatos contábeis que são permutativos e modificativos, simultaneamente. E, por isso, também podem ser aumentativos ou diminutivos.  IV. Todos os tipos de fatos contábeis sempre alteram o patrimônio em qualidade.",
-    "alternativa 1": "Apenas I,II e III",
-    "alternativa 2": "Apenas I,II e IV",
-    "alternativa 3": "Apenas I,III e IV",
-    "alternativa 4": "Apenas III e IV",
-    "alternativa_certa": 3
-  },
-  {
-    "id": 17,
     "texto": "Bens que podemos ver e tocar são os:",
     "alternativa 1": "Eles alteram o patrimônio apenas aumentativamente",
     "alternativa 2": "Alteram aumentativamente o ativo da entidade",
@@ -166,7 +148,7 @@ class PerguntasJson {
     "alternativa_certa": 4
   },
   {
-    "id": 18,
+    "id": 16,
     "texto": "As duas finalidades básicas para o uso dasinformações contábeis são:",
     "alternativa 1": "Controle e planejamento",
     "alternativa 2": "Controle e acompanhamento",
@@ -175,7 +157,7 @@ class PerguntasJson {
     "alternativa_certa": 1
   },
   {
-    "id": 19,
+    "id": 17,
     "texto": "Um determinado fato contábil em uma empresa ocasionou a redução do valor do seu sativo e do valor do seu passivo e tal forma que a redução deste foi maior do que a redução daquele, assim tal fato é denominado:",
     "alternativa 1": "Permutativo",
     "alternativa 2": "Modificativo",
@@ -184,7 +166,7 @@ class PerguntasJson {
     "alternativa_certa": 4
   },
   {
-    "id": 20,
+    "id": 18,
     "texto": "Quando os débitos de uma empresa excedem o seu patrimônio bruto, dizemos que a situação líquida é:",
     "alternativa 1": "superavitária",
     "alternativa 2": "ativa",
@@ -193,7 +175,7 @@ class PerguntasJson {
     "alternativa_certa": 3
   },
   {
-    "id": 21,
+    "id": 19,
     "texto": "Não corresponde ao conceito de Passivo exigível:",
     "alternativa 1": "capital de terceiros",
     "alternativa 2": "capital alheio",
@@ -202,7 +184,7 @@ class PerguntasJson {
     "alternativa_certa": 4
   },
   {
-    "id": 22,
+    "id": 20,
     "texto": "Não é o mesmo que Capital próprio:",
     "alternativa 1": "bens + direitos - obrigações",
     "alternativa 2": "capital aplicado - capital de terceiros",
@@ -211,7 +193,7 @@ class PerguntasJson {
     "alternativa_certa": 3
   },
    {
-    "id": 23,
+    "id": 21,
     "texto": "A diferença entre o capital total à disposição da empresa e os recursos não correntes corresponde:",
     "alternativa 1": "ao passivo exigível",
     "alternativa 2": "ao capital de terceiros",
@@ -220,7 +202,7 @@ class PerguntasJson {
     "alternativa_certa": 4
   },
   {
-    "id": 24,
+    "id": 22,
     "texto": "A Demonstração do Resultado do Exercício deverá conter algumas rubricas, obedecidas também a determinações legais. Assinale a alternativa abaixo que não integra essa Demonstração Contábil.",
     "alternativa 1": "Receitas",
     "alternativa 2": "Custo dos Produtos Vendidos, das Mercadorias Vendidas ou dos Serviços Prestados.",
@@ -229,7 +211,7 @@ class PerguntasJson {
     "alternativa_certa": 3
   },
   {
-    "id": 25,
+    "id": 23,
     "texto": " A cada encerramento de exercício as empresas emitem suas demonstrações contábeis. Acerca do Balanço Patrimonial, assinale a opção correta",
     "alternativa 1": "Demonstra local, data, conta devedora, conta credora, histórico e valor dos lançamentos contábeis.",
     "alternativa 2": "É a demonstração que evidencia o patrimônio de uma empresa de forma quantitativa e qualitativa.",
@@ -238,7 +220,7 @@ class PerguntasJson {
     "alternativa_certa": 2
   },
   {
-    "id": 26,
+    "id": 24,
     "texto": "Na Contabilidade, o Patrimônio de uma empresa é o conjunto de bens, direitos e obrigações. Contabilmente, as obrigações da empresa estão localizadas no:",
     "alternativa 1": "ativo circulante",
     "alternativa 2": "ativo não circulante",
@@ -247,7 +229,7 @@ class PerguntasJson {
     "alternativa_certa": 4
   },
    {
-    "id": 27,
+    "id": 25,
     "texto": "Assinale a opção em que TODAS as contas pertencem ao Passivo Circulante.",
     "alternativa 1": "Salários a Pagar, Impostos a Pagar, Encargos a recolher, 20ª parcela de Leasing.",
     "alternativa 2": "Caixa, Adiantamentos a Fornecedores, Adiantamento de Clientes, Energia Elétrica a pagar.",
@@ -256,31 +238,31 @@ class PerguntasJson {
     "alternativa_certa": 4
   },
   {
+    "id": 26,
+    "texto": "Integra(m) normalmente o passivo circulante das empresas:",
+    "alternativa 1": "as debêntures.",
+    "alternativa 2": "os empréstimos vencidos, em fase de renegociação de prazos.",
+    "alternativa 3": "o Programa de Recuperação Fiscal (REFIS).",
+    "alternativa 4": "a provisão para previdência complementar de empregados.",
+    "alternativa_certa": 2
+  },
+  {
+    "id": 27,
+    "texto": "As despesas devem ser classifcadas com um nível de detalhamento tal que facilite a análise por parte das pessoas. Este enunciado se refere ao princípio da:",
+    "alternativa 1": "Universalidade.",
+    "alternativa 2": "Unidade.",
+    "alternativa 3": "Especifcação.",
+    "alternativa 4": "Exclusividade.",
+    "alternativa_certa": 3
+  },
+  {
     "id": 28,
-    "texto": "Observe a afirmativa: 'Deve-se registrar em conta de passivo uma obrigação presente que provavelmente requeira um sacrifício de ativos.' Esta afirmativa está:",
-    "alternativa 1": "Correta",
-    "alternativa 2": "Incorreta",
-    "alternativa 3": "Meio Correta",
-    "alternativa 4": "Meio Incorreta",
-    "alternativa_certa": 1
-  },
-  {
-    "id": 29,
-    "texto": "O capital próprio das entidades cujo patrimônio é controlado pela contabilidade corresponde ao seu ativo total.",
-    "alternativa 1": "Certo",
-    "alternativa 2": "Errado",
-    "alternativa 3": "Meio Correta",
-    "alternativa 4": "Meio Incorreta",
-    "alternativa_certa": 2
-  },
-  {
-    "id": 30,
-    "texto": "Acerca do mercado de capitais, julgue a seguinte frase:  'As ações representam uma fração do capital social de uma sociedade anônima, conferindo todas elas a seus acionistas direito a voto nas decisões da empresa.   A frase está:",
-    "alternativa 1": "Certo",
-    "alternativa 2": "Errado",
-    "alternativa 3": "Meio Correta",
-    "alternativa 4": "Meio Incorreta",
-    "alternativa_certa": 2
+    "texto": "Princípio de Contabilidade onde ordena que os componentes do patrimônio tenham seu registro inicial efetuado pelos valores ocorridos na data das transações havidas com o mundo exterior à entidade, estabelecendo, pois, a viga-mestra da avaliação patrimonial: a determinação do valor monetário de um componente do patrimônio",
+    "alternativa 1": "Da Competência.",
+    "alternativa 2": "Da Prudência.",
+    "alternativa 3": "Da Continuidade.",
+    "alternativa 4": "Do Registro pelo Valor Original.",
+    "alternativa_certa": 4
   }
   
 ]
