@@ -134,7 +134,7 @@ class PerguntasJson {
     "texto": "A seguinte opção não é considerada uma técnica contábil:",
     "alternativa 1": "Escrituração",
     "alternativa 2": "Elaboração das demonstrações contábeis",
-    "alternativa 3": "Auditoria ",
+    "alternativa 3": "Auditoria",
     "alternativa 4": "Planejamento",
     "alternativa_certa": 4
   },
@@ -147,6 +147,141 @@ class PerguntasJson {
     "alternativa 4": "Ciência que organiza, orienta a analisa os fenômenos relativos a produção.",
     "alternativa_certa": 2
   },
+  {
+    "id": 16,
+    "texto": "Os fatos contábeis podem alterar o patrimônio em quantidade e/ou em qualidade e alterar ou não o resultado. Assim, quanto às classificações em permutativos, modificativos e mistos, analise as assertivas e assinale a alternativa que aponta as corretas. \n I. Os fatos permutativos são aqueles fatos contábeis que podem ou não alterar o patrimônio em quantidade, mas geralmente o alteram em qualidade, bem como jamais alteram o patrimônio líquido em quantidade. \n II. Os fatos modificativos são aqueles fatos contábeis que alteram o patrimônio líquido em qualidade e não em quantidade. \n III. Os fatos mistos são aqueles fatos contábeis que são permutativos e modificativos, simultaneamente. E, por isso, também podem ser aumentativos ou diminutivos. \n IV. Todos os tipos de fatos contábeis sempre alteram o patrimônio em qualidade.",
+    "alternativa 1": "Apenas I,II e III",
+    "alternativa 2": "Apenas I,II e IV",
+    "alternativa 3": "Apenas I,III e IV",
+    "alternativa 4": "Apenas III e IV",
+    "alternativa_certa": 3
+  },
+  {
+    "id": 17,
+    "texto": "Bens que podemos ver e tocar são os:",
+    "alternativa 1": "Eles alteram o patrimônio apenas aumentativamente",
+    "alternativa 2": "Alteram aumentativamente o ativo da entidade",
+    "alternativa 3": "Alteram diminutamente ativo da entidade",
+    "alternativa 4": "Podem ser aumentativos e diminutivo alterando o patrimônio líquido",
+    "alternativa_certa": 4
+  },
+  {
+    "id": 18,
+    "texto": "As duas finalidades básicas para o uso dasinformações contábeis são:",
+    "alternativa 1": "Controle e planejamento",
+    "alternativa 2": "Controle e acompanhamento",
+    "alternativa 3": "Acompanhamento e controle",
+    "alternativa 4": "Analise e planejamento",
+    "alternativa_certa": 1
+  },
+  {
+    "id": 19,
+    "texto": "Um determinado fato contábil em uma empresa ocasionou a redução do valor do seu sativo e do valor do seu passivo e tal forma que a redução deste foi maior do que a redução daquele, assim tal fato é denominado:",
+    "alternativa 1": "Permutativo",
+    "alternativa 2": "Modificativo",
+    "alternativa 3": "Modificativo aumentativo",
+    "alternativa 4": "Misto aumentativo",
+    "alternativa_certa": 4
+  },
+  {
+    "id": 20,
+    "texto": "Quando os débitos de uma empresa excedem o seu patrimônio bruto, dizemos que a situação líquida é:",
+    "alternativa 1": "superavitária",
+    "alternativa 2": "ativa",
+    "alternativa 3": "deficitária",
+    "alternativa 4": "favorável",
+    "alternativa_certa": 3
+  },
+  {
+    "id": 21,
+    "texto": "Não corresponde ao conceito de Passivo exigível:",
+    "alternativa 1": "capital de terceiros",
+    "alternativa 2": "capital alheio",
+    "alternativa 3": "débitos da empresa",
+    "alternativa 4": "recursos correntes",
+    "alternativa_certa": 4
+  },
+  {
+    "id": 22,
+    "texto": "Não é o mesmo que Capital próprio:",
+    "alternativa 1": "bens + direitos - obrigações",
+    "alternativa 2": "capital aplicado - capital de terceiros",
+    "alternativa 3": "capital total à disposição da empresa - capital aplicado",
+    "alternativa 4": "recursos não correntes - passivo não circulante",
+    "alternativa_certa": 3
+  },
+   {
+    "id": 23,
+    "texto": "A diferença entre o capital total à disposição da empresa e os recursos não correntes corresponde:",
+    "alternativa 1": "ao passivo exigível",
+    "alternativa 2": "ao capital de terceiros",
+    "alternativa 3": "às exigibilidades a longo prazo",
+    "alternativa 4": " ao passivo circulante",
+    "alternativa_certa": 4
+  },
+  {
+    "id": 24,
+    "texto": "A Demonstração do Resultado do Exercício deverá conter algumas rubricas, obedecidas também a determinações legais. Assinale a alternativa abaixo que não integra essa Demonstração Contábil.",
+    "alternativa 1": "Receitas",
+    "alternativa 2": "Custo dos Produtos Vendidos, das Mercadorias Vendidas ou dos Serviços Prestados.",
+    "alternativa 3": " Ajustes de Exercícios Anteriores.",
+    "alternativa 4": "Despesas e Receitas Financeiras",
+    "alternativa_certa": 3
+  },
+  {
+    "id": 25,
+    "texto": " A cada encerramento de exercício as empresas emitem suas demonstrações contábeis. Acerca do Balanço Patrimonial, assinale a opção correta",
+    "alternativa 1": "Demonstra local, data, conta devedora, conta credora, histórico e valor dos lançamentos contábeis.",
+    "alternativa 2": "É a demonstração que evidencia o patrimônio de uma empresa de forma quantitativa e qualitativa.",
+    "alternativa 3": "Indica a formação e a utilização do capital social e das reservas da empresa.",
+    "alternativa 4": "Informa o valor dos bens adquiridos nos últimos seis meses.",
+    "alternativa_certa": 2
+  },
+  {
+    "id": 26,
+    "texto": "Na Contabilidade, o Patrimônio de uma empresa é o conjunto de bens, direitos e obrigações. Contabilmente, as obrigações da empresa estão localizadas no:",
+    "alternativa 1": "ativo circulante",
+    "alternativa 2": "ativo não circulante",
+    "alternativa 3": "capital social",
+    "alternativa 4": "passivo",
+    "alternativa_certa": 4
+  },
+   {
+    "id": 27,
+    "texto": "Assinale a opção em que TODAS as contas pertencem ao Passivo Circulante.",
+    "alternativa 1": "Salários a Pagar, Impostos a Pagar, Encargos a recolher, 20ª parcela de Leasing.",
+    "alternativa 2": "Caixa, Adiantamentos a Fornecedores, Adiantamento de Clientes, Energia Elétrica a pagar.",
+    "alternativa 3": "Salários a Pagar, Imóveis, Impostos a Pagar, Encargos a recolher.",
+    "alternativa 4": "Salários a Pagar, Empréstimos Bancário de Curto Prazo, Encargos a Recolher.",
+    "alternativa_certa": 4
+  },
+  {
+    "id": 28,
+    "texto": 'Observe a afirmativa: \n "Deve-se registrar em conta de passivo uma obrigação presente que provavelmente requeira um sacrifício de ativos." \n Esta afirmativa está:',
+    "alternativa 1": "Correta",
+    "alternativa 2": "Incorreta",
+    "alternativa 3": "Meio Correta",
+    "alternativa 4": "Meio Incorreta",
+    "alternativa_certa": 1
+  },
+  {
+    "id": 29,
+    "texto": "O capital próprio das entidades cujo patrimônio é controlado pela contabilidade corresponde ao seu ativo total.",
+    "alternativa 1": "Certo",
+    "alternativa 2": "Errado",
+    "alternativa 3": "Meio Correta",
+    "alternativa 4": "Meio Incorreta",
+    "alternativa_certa": 2
+  },
+  {
+    "id": 30,
+    "texto": 'Acerca do mercado de capitais, julgue a seguinte frase: \n "As ações representam uma fração do capital social de uma sociedade anônima, conferindo todas elas a seus acionistas direito a voto nas decisões da empresa." \n A frase está:',
+    "alternativa 1": "Certo",
+    "alternativa 2": "Errado",
+    "alternativa 3": "Meio Correta",
+    "alternativa 4": "Meio Incorreta",
+    "alternativa_certa": 2
+  }
   
 ]
     ''';
